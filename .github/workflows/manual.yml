@@ -6,11 +6,7 @@ on:
       nivel:
         description: "Nivel de alerta"
         required: true
-        type: choice
-        options:
-          - bajo
-          - medio
-          - alto
+        default: "bajo"
 
 jobs:
   manual-job:

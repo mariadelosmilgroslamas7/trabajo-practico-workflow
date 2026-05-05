@@ -1,0 +1,20 @@
+name: Manual Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      nivel:
+        description: "Nivel de alerta"
+        required: true
+        type: choice
+        options:
+          - bajo
+          - medio
+          - alto
+
+jobs:
+  manual-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostrar nivel elegido
+        run: echo "Nivel seleccionado: ${{ github.event.inputs.nivel }}"
